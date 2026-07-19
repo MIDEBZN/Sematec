@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Zones d'intervention" description="Sematec intervient dans toutes les communes de Bruxelles pour vos urgences et travaux de plomberie.">
+	<Header />
+	
+	<main class="page-main">
+		<section class="page-hero">
+			<div class="container text-center animate-fade-in">
+				<h1>Zones <span>d'Intervention</span></h1>
+				<p class="subtitle">Nous couvrons l'ensemble des 19 communes de la Région de Bruxelles-Capitale avec une rapidité d'intervention optimale.</p>
+			</div>
+		</section>
+
+		<section class="locations-content container">
+			<div class="map-card">
+				<div class="map-placeholder">
+					<span class="icon">🗺️</span>
+					<h3>Intervention Rapide sur Bruxelles</h3>
+					<p>Nos équipes sont réparties stratégiquement pour garantir des délais d'intervention courts.</p>
+				</div>
+			</div>
+
+			<div class="communes-grid">
+				<div class="commune-group">
+					<h3>Bruxelles-Ville & Centre</h3>
+					<ul>
+						<li>Bruxelles (1000)</li>
+						<li>Laeken (1020)</li>
+						<li>Schaerbeek (1030)</li>
+						<li>Etterbeek (1040)</li>
+						<li>Ixelles (1050)</li>
+					</ul>
+				</div>
+				<div class="commune-group">
+					<h3>Sud & Est</h3>
+					<ul>
+						<li>Saint-Gilles (1060)</li>
+						<li>Anderlecht (1070)</li>
+						<li>Molenbeek-Saint-Jean (1080)</li>
+						<li>Koekelberg (1081)</li>
+						<li>Berchem-Sainte-Agathe (1082)</li>
+					</ul>
+				</div>
+				<div class="commune-group">
+					<h3>Nord & Ouest</h3>
+					<ul>
+						<li>Ganshoren (1083)</li>
+						<li>Jette (1090)</li>
+						<li>Evere (1140)</li>
+						<li>Woluwe-Saint-Pierre (1150)</li>
+						<li>Auderghem (1160)</li>
+					</ul>
+				</div>
+				<div class="commune-group">
+					<h3>Périphérie</h3>
+					<ul>
+						<li>Watermael-Boitsfort (1170)</li>
+						<li>Uccle (1180)</li>
+						<li>Forest (1190)</li>
+						<li>Woluwe-Saint-Lambert (1200)</li>
+						<li>Saint-Josse-ten-Noode (1210)</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<section class="cta-banner">
+			<div class="container">
+				<h2>Une urgence dans votre commune ?</h2>
+				<a href="tel:+3221234567" class="btn">Appeler le +32 2 123 45 67</a>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.page-main {
+		padding-top: 100px;
+	}
+
+	.page-hero {
+		padding: 60px 0;
+		background: linear-gradient(180deg, rgba(255, 51, 102, 0.05) 0%, transparent 100%);
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		margin-bottom: 20px;
+	}
+
+	h1 span {
+		color: var(--primary);
+	}
+
+	.subtitle {
+		font-size: 1.2rem;
+		color: var(--text-muted);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.locations-content {
+		padding: 60px 20px;
+	}
+
+	.map-card {
+		background: var(--bg-card);
+		border: 1px solid rgba(255,255,255,0.05);
+		border-radius: 20px;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 60px;
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.map-card::before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background: radial-gradient(circle at center, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+	}
+
+	.map-placeholder {
+		text-align: center;
+		position: relative;
+		z-index: 2;
+	}
+
+	.map-placeholder .icon {
+		font-size: 4rem;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	.communes-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+	}
+
+	.commune-group h3 {
+		font-size: 1.2rem;
+		color: var(--primary);
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.commune-group ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.commune-group li {
+		color: var(--text-muted);
+		margin-bottom: 12px;
+		font-size: 0.95rem;
+	}
+
+	.cta-banner {
+		background: var(--primary);
+		padding: 60px 0;
+		text-align: center;
+		color: var(--bg-dark);
+		margin-top: 40px;
+	}
+
+	.cta-banner h2 {
+		margin-bottom: 20px;
+		font-size: 2rem;
+		color: var(--bg-dark);
+	}
+
+	.cta-banner .btn {
+		background: var(--bg-dark);
+		color: var(--primary);
+	}
+
+	.cta-banner .btn:hover {
+		background: #000;
+		color: var(--primary);
+	}
+
+	@media (max-width: 992px) {
+		.communes-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+
+	@media (max-width: 768px) {
+		h1 { font-size: 2.5rem; }
+		.communes-grid { grid-template-columns: 1fr; }
+	}
+</style>

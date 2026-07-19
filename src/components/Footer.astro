@@ -1,0 +1,115 @@
+---
+---
+<footer class="footer">
+	<div class="container footer-grid">
+		<div class="footer-col">
+			<h3><span class="logo-icon">S</span> Sematec</h3>
+			<p>Votre expert en plomberie à Bruxelles. Interventions rapides, professionnelles et garanties. Nous sommes à votre service 7j/7.</p>
+		</div>
+		<div class="footer-col">
+			<h4>Liens Rapides</h4>
+			<ul>
+				<li><a href="/">Accueil</a></li>
+				<li><a href="/services">Services</a></li>
+				<li><a href="/locations">Zones d'intervention</a></li>
+				<li><a href="/about">À propos</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<h4>Contact</h4>
+			<ul>
+				<li>📍 1000 Bruxelles, Belgique</li>
+				<li>📞 +32 2 123 45 67</li>
+				<li>✉️ info@sematec-plomberie.be</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<p>&copy; {new Date().getFullYear()} Sematec Plomberie. Tous droits réservés.</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background: var(--bg-card);
+		padding-top: 80px;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		margin-top: 80px;
+	}
+
+	.footer-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		gap: 60px;
+		margin-bottom: 60px;
+	}
+
+	.footer-col h3 {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 1.5rem;
+		margin-bottom: 20px;
+	}
+
+	.logo-icon {
+		background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+		color: var(--bg-dark);
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 8px;
+		font-size: 1.2rem;
+		font-weight: 800;
+	}
+
+	.footer-col h4 {
+		font-size: 1.2rem;
+		margin-bottom: 20px;
+		color: var(--text-main);
+	}
+
+	.footer-col p {
+		color: var(--text-muted);
+		line-height: 1.8;
+	}
+
+	.footer-col ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.footer-col ul li {
+		margin-bottom: 12px;
+		color: var(--text-muted);
+	}
+
+	.footer-col ul a {
+		transition: color 0.3s ease;
+	}
+
+	.footer-col ul a:hover {
+		color: var(--primary);
+	}
+
+	.footer-bottom {
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		padding: 20px 0;
+		text-align: center;
+		color: var(--text-muted);
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 768px) {
+		.footer-grid {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+	}
+</style>

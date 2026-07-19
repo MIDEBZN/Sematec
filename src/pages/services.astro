@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Nos Services de Plomberie" description="Découvrez les services de plomberie proposés par Sematec : dépannage, installation, entretien de chauffe-eau et canalisations.">
+	<Header />
+	
+	<main class="page-main">
+		<section class="page-hero">
+			<div class="container text-center animate-fade-in">
+				<h1>Nos <span>Services</span></h1>
+				<p class="subtitle">Une expertise complète pour tous vos besoins en plomberie sanitaire et chauffage.</p>
+			</div>
+		</section>
+
+		<section class="services-grid container">
+			<div class="service-card">
+				<div class="service-icon">🔧</div>
+				<h2>Dépannage d'urgence</h2>
+				<p>Fuite d'eau, canalisation bouchée ou panne de chauffe-eau ? Nous intervenons 24h/24 et 7j/7 pour sécuriser et réparer vos installations.</p>
+				<ul class="service-list">
+					<li>Recherche et réparation de fuites</li>
+					<li>Débouchage WC et éviers</li>
+					<li>Réparation de chasses d'eau</li>
+				</ul>
+			</div>
+
+			<div class="service-card">
+				<div class="service-icon">🚿</div>
+				<h2>Installation Sanitaire</h2>
+				<p>Nous concevons et installons vos salles de bain, cuisines et sanitaires avec des matériaux de qualité pour une durabilité maximale.</p>
+				<ul class="service-list">
+					<li>Rénovation de salle de bain</li>
+					<li>Installation de douches à l'italienne</li>
+					<li>Pose de robinetterie</li>
+				</ul>
+			</div>
+
+			<div class="service-card">
+				<div class="service-icon">🔥</div>
+				<h2>Chauffage & Chauffe-eau</h2>
+				<p>Installation, entretien et réparation de vos systèmes de production d'eau chaude sanitaire et de chauffage.</p>
+				<ul class="service-list">
+					<li>Entretien chaudière</li>
+					<li>Remplacement chauffe-eau</li>
+					<li>Désembouage radiateurs</li>
+				</ul>
+			</div>
+			
+			<div class="service-card">
+				<div class="service-icon">🌊</div>
+				<h2>Canalisations</h2>
+				<p>Nettoyage, inspection et réparation de vos réseaux d'évacuation d'eaux usées.</p>
+				<ul class="service-list">
+					<li>Curage haute pression</li>
+					<li>Inspection caméra</li>
+					<li>Réparation de conduits</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.page-main {
+		padding-top: 100px;
+	}
+
+	.page-hero {
+		padding: 60px 0;
+		background: linear-gradient(180deg, rgba(0, 229, 255, 0.05) 0%, transparent 100%);
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		margin-bottom: 20px;
+	}
+
+	h1 span {
+		color: var(--primary);
+	}
+
+	.subtitle {
+		font-size: 1.2rem;
+		color: var(--text-muted);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+		padding: 60px 20px;
+	}
+
+	.service-card {
+		background: var(--bg-card);
+		border: 1px solid rgba(255,255,255,0.05);
+		border-radius: 20px;
+		padding: 40px;
+		transition: transform 0.3s ease;
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+		border-color: rgba(0, 229, 255, 0.2);
+	}
+
+	.service-icon {
+		font-size: 3rem;
+		margin-bottom: 20px;
+	}
+
+	.service-card h2 {
+		font-size: 1.8rem;
+		margin-bottom: 15px;
+	}
+
+	.service-card p {
+		color: var(--text-muted);
+		margin-bottom: 20px;
+	}
+
+	.service-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.service-list li {
+		padding-left: 24px;
+		position: relative;
+		margin-bottom: 10px;
+		color: var(--text-main);
+	}
+
+	.service-list li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: var(--primary);
+		font-weight: bold;
+	}
+
+	@media (max-width: 768px) {
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+		h1 { font-size: 2.5rem; }
+	}
+</style>

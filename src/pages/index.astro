@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Plombier Urgence 24/7" description="Sematec: Plombier expert à Bruxelles. Dépannage urgence 24/7, installation et entretien de plomberie.">
+	<Header />
+	
+	<main>
+		<section class="hero">
+			<div class="hero-bg"></div>
+			<div class="container hero-container animate-fade-in">
+				<span class="badge">Disponible 24/7 à Bruxelles</span>
+				<h1>L'Expertise en Plomberie <span>Sans Compromis</span></h1>
+				<p>Dépannage d'urgence, installation, et entretien. Sematec intervient rapidement pour tous vos problèmes de plomberie avec professionnalisme et transparence.</p>
+				<div class="hero-actions">
+					<a href="/contact" class="btn">Intervention Urgente</a>
+					<a href="/services" class="btn btn-outline">Nos Services</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="features container">
+			<div class="feature-card">
+				<div class="feature-icon">⚡</div>
+				<h3>Intervention Rapide</h3>
+				<p>Nous sommes chez vous en moins de 30 minutes pour les urgences sur tout Bruxelles.</p>
+			</div>
+			<div class="feature-card">
+				<div class="feature-icon">🛡️</div>
+				<h3>Travail Garanti</h3>
+				<p>Toutes nos interventions sont couvertes par une garantie pour votre tranquillité d'esprit.</p>
+			</div>
+			<div class="feature-card">
+				<div class="feature-icon">💶</div>
+				<h3>Devis Transparent</h3>
+				<p>Pas de mauvaises surprises. Nos prix sont clairs et annoncés avant toute intervention.</p>
+			</div>
+		</section>
+		
+		<section class="cta-section">
+			<div class="container cta-container">
+				<h2>Besoin d'un plombier en urgence ?</h2>
+				<p>Nos équipes sont prêtes à intervenir 24h/24 et 7j/7.</p>
+				<a href="tel:+3221234567" class="btn btn-large">📞 +32 2 123 45 67</a>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.hero {
+		position: relative;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		padding-top: 80px;
+		overflow: hidden;
+	}
+
+	.hero-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: radial-gradient(circle at top right, rgba(0, 229, 255, 0.15) 0%, transparent 60%),
+					radial-gradient(circle at bottom left, rgba(255, 51, 102, 0.1) 0%, transparent 50%);
+		z-index: -1;
+	}
+
+	.hero-container {
+		max-width: 800px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.badge {
+		display: inline-block;
+		background: rgba(0, 229, 255, 0.1);
+		color: var(--primary);
+		padding: 8px 16px;
+		border-radius: 20px;
+		font-weight: 600;
+		font-size: 0.9rem;
+		margin-bottom: 24px;
+		border: 1px solid rgba(0, 229, 255, 0.2);
+	}
+
+	h1 {
+		font-size: 4rem;
+		line-height: 1.1;
+		margin-bottom: 24px;
+	}
+
+	h1 span {
+		background: linear-gradient(135deg, var(--primary), #fff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.hero p {
+		font-size: 1.25rem;
+		color: var(--text-muted);
+		margin-bottom: 40px;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.hero-actions {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.features {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		margin-top: -60px;
+		position: relative;
+		z-index: 10;
+		padding-bottom: 80px;
+	}
+
+	.feature-card {
+		background: var(--bg-card);
+		border: 1px solid rgba(255,255,255,0.05);
+		border-radius: 20px;
+		padding: 40px;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.feature-card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+		border-color: rgba(0, 229, 255, 0.2);
+	}
+
+	.feature-icon {
+		font-size: 2.5rem;
+		margin-bottom: 20px;
+	}
+
+	.feature-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: 15px;
+	}
+
+	.feature-card p {
+		color: var(--text-muted);
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, var(--bg-card), #0a0a0a);
+		padding: 100px 0;
+		text-align: center;
+		border-top: 1px solid rgba(255,255,255,0.05);
+		border-bottom: 1px solid rgba(255,255,255,0.05);
+	}
+
+	.cta-container h2 {
+		font-size: 2.5rem;
+		margin-bottom: 20px;
+	}
+
+	.cta-container p {
+		font-size: 1.2rem;
+		color: var(--text-muted);
+		margin-bottom: 40px;
+	}
+
+	.btn-large {
+		font-size: 1.2rem;
+		padding: 16px 40px;
+	}
+
+	@media (max-width: 768px) {
+		h1 { font-size: 2.5rem; }
+		.hero-actions { flex-direction: column; }
+		.features { grid-template-columns: 1fr; margin-top: 40px; }
+	}
+</style>

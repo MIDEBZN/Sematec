@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="À propos de Sematec" description="Découvrez l'histoire de Sematec, votre entreprise de plomberie de confiance à Bruxelles. Une équipe d'experts à votre service.">
+	<Header />
+	
+	<main class="page-main">
+		<section class="page-hero">
+			<div class="container text-center animate-fade-in">
+				<h1>À propos de <span>Sematec</span></h1>
+				<p class="subtitle">Votre partenaire de confiance pour tous vos travaux de plomberie à Bruxelles.</p>
+			</div>
+		</section>
+
+		<section class="about-content container">
+			<div class="about-grid">
+				<div class="about-text">
+					<h2>Notre Histoire</h2>
+					<p>Fondée avec la volonté d'apporter un service de plomberie irréprochable aux résidents de Bruxelles, Sematec s'est rapidement imposée comme une référence dans le domaine du dépannage et de l'installation sanitaire.</p>
+					<p>Notre équipe est composée d'artisans plombiers qualifiés et passionnés par leur métier, prêts à intervenir dans les plus brefs délais pour résoudre vos problèmes.</p>
+					
+					<h2>Nos Valeurs</h2>
+					<ul class="values-list">
+						<li><strong>Transparence :</strong> Des devis clairs et sans surprises.</li>
+						<li><strong>Réactivité :</strong> Une intervention rapide pour les urgences.</li>
+						<li><strong>Qualité :</strong> L'utilisation de matériaux durables et certifiés.</li>
+					</ul>
+				</div>
+				<div class="about-image-card">
+					<div class="stat">
+						<span class="number">10+</span>
+						<span class="label">Années d'expérience</span>
+					</div>
+					<div class="stat">
+						<span class="number">5000+</span>
+						<span class="label">Interventions réussies</span>
+					</div>
+					<div class="stat">
+						<span class="number">100%</span>
+						<span class="label">Clients satisfaits</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.page-main {
+		padding-top: 100px;
+	}
+
+	.page-hero {
+		padding: 60px 0;
+		background: linear-gradient(180deg, rgba(0, 229, 255, 0.05) 0%, transparent 100%);
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		margin-bottom: 20px;
+	}
+
+	h1 span {
+		color: var(--primary);
+	}
+
+	.subtitle {
+		font-size: 1.2rem;
+		color: var(--text-muted);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.about-content {
+		padding: 60px 20px;
+	}
+
+	.about-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.about-text h2 {
+		font-size: 2rem;
+		margin-bottom: 20px;
+		color: var(--text-main);
+	}
+
+	.about-text p {
+		color: var(--text-muted);
+		margin-bottom: 20px;
+		font-size: 1.1rem;
+	}
+
+	.values-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.values-list li {
+		margin-bottom: 15px;
+		padding-left: 30px;
+		position: relative;
+		color: var(--text-muted);
+	}
+
+	.values-list li::before {
+		content: '🔹';
+		position: absolute;
+		left: 0;
+		top: 2px;
+	}
+
+	.values-list strong {
+		color: var(--text-main);
+	}
+
+	.about-image-card {
+		background: var(--bg-card);
+		border: 1px solid rgba(255,255,255,0.05);
+		border-radius: 20px;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 20px;
+		background: rgba(255,255,255,0.02);
+		border-radius: 12px;
+		border: 1px solid rgba(0, 229, 255, 0.1);
+	}
+
+	.stat .number {
+		font-size: 3rem;
+		font-weight: 800;
+		color: var(--primary);
+		margin-bottom: 10px;
+	}
+
+	.stat .label {
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 768px) {
+		h1 { font-size: 2.5rem; }
+		.about-grid { grid-template-columns: 1fr; }
+	}
+</style>
